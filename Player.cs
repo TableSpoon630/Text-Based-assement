@@ -11,5 +11,6 @@ namespace Text_Based_Assement
         public int health = 10;
         public int armorValue = 0;
         public int potion = 5;
+        public int weaponValue = 1;
     }
 }
