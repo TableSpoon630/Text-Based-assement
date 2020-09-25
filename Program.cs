@@ -2,7 +2,7 @@
 
 namespace Text_Based_Assement
 {
-    class Program
+   public class Program
     {
         public static Player currentPlayer = new Player();
         public static bool mainLoop = true;
