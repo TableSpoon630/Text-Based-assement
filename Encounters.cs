@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Text_Based_Assement
 {
-    class Encounters
+   public class Encounters
     {
          static Random rand = new Random();
         //Encounter Generic
@@ -55,8 +55,8 @@ namespace Text_Based_Assement
             if(random)
             {
                 n = GetName();
-                p = rand.Next(1, 5);
-                h = rand.Next(1, 8);
+                p = Program.currentPlayer.GetPower();
+                h = Program.currentPlayer.GetHealth();
             }
             else
             {
@@ -115,7 +115,6 @@ namespace Text_Based_Assement
                     {
                         Console.WriteLine(" You use your crazy ninja moves to evade the " + n + " and succesfully escape!");
                         Console.ReadKey();
-                        // go to store
                     }
                 }
                 else if (input.ToLower() == "h" || input.ToLower() == "heal")
@@ -152,10 +151,7 @@ namespace Text_Based_Assement
                 }
                 Console.ReadKey();
             }
-            int c = rand.Next(10,50);
-            Console.WriteLine("As you stand victorious over the " + n + ", its body dissolves into "+c+" gold coins!");
-            Program.currentPlayer.coins += c;
-            Console.ReadKey();
+
         }
 
         public static string GetName()
